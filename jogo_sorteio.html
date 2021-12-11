@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<title>Jogo de adivinhação!</title>
+
+<script type="text/javascript">
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+
+
+        return Math.round(Math.random() * n);
+    }    
+
+    alert("Vamos jogar um jogo de adivinhação!");
+
+    var numeroPensado = sorteia(10);
+
+
+     var chute = parseInt(prompt("De zero à dez, qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        mostra("Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+
+        if(chute > numeroPensado) {
+
+            mostra("Você errou! Seu chute é maior que o número pensado!");
+
+        } else {
+
+            mostra("Você errou! Seu chute é menor que o número pensado!");
+        }
+
+    }
+
+        console.log("pensei no " +  numeroPensado + " :P");
+        mostra("<br>Em <q><i>console</q></i> vc encontrará a resposta!");
+
+</script>
